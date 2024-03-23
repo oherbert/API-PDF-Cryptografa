@@ -1,0 +1,31 @@
+{
+  "server": {
+    "port": 8888,
+    "integrationInterval": 5
+  },
+  "auth": {
+    "authURL": "https://trust-pix.santander.com.br/oauth/token"
+  },
+  "certificate": {
+    "path": "",
+    "passphrase": "",
+    "cert": "marquespan.pem",
+    "key": "marquespan_key.pem"
+  },
+  "database": {
+    "user": "marquespan",
+    "password": "megamega",
+    "connectString": "192.168.4.3:1521/teste"
+  },
+  "request": {
+    "baseUrl": "https://trust-pix.santander.com.br/api/v1/"
+  },
+  "token": {
+    "key": "6085605411284c445b6371d76100329d",
+    "sessionExpiresIn": "1m"
+  },
+  "oracleClient": "",
+  "uploadFolder": "",
+  "uploadFolderName": "apiCryptografia",
+  "comentario1": "Tipo de oracleClient - app: Dentro do build do projeto; default: Do Servidor; caminhoExpecifico: 'C://etc...'"
+}
