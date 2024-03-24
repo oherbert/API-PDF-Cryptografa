@@ -9,20 +9,20 @@
   "certificate": {
     "path": "",
     "passphrase": "",
-    "cert": "marquespan.pem",
-    "key": "marquespan_key.pem"
+    "cert": "",
+    "key": ""
   },
   "database": {
-    "user": "marquespan",
-    "password": "megamega",
-    "connectString": "192.168.4.3:1521/teste"
+    "user": "",
+    "password": "",
+    "connectString": ""
   },
   "request": {
-    "baseUrl": "https://trust-pix.santander.com.br/api/v1/"
+    "baseUrl": ""
   },
   "token": {
-    "key": "6085605411284c445b6371d76100329d",
-    "sessionExpiresIn": "1m"
+    "key": "",
+    "sessionExpiresIn": ""
   },
   "oracleClient": "",
   "uploadFolder": "",
