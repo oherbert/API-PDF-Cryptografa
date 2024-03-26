@@ -1,14 +1,17 @@
-import { NextFunction, Request, Response } from 'express';
+import { Request, Response } from 'express';
 import pdfManager from '../models/PdfManager'
 import path from "path";
+import responsesManager from '../models/ResponsesManager';
 
-export const pdfManagerController = (req: Request, res: Response, next: NextFunction) => {
+export const pdfManagerController = (req: Request, res: Response) => {
 
   if (!req.file) {
     return res.status(400).send('Nenhum arquivo enviado.');
   }
 
   const passwordQuery = req.query && 'password' in req.query && typeof req.query.password === 'string' ? req.query.password : '';
+
+  const idReq = req.query && 'id' in req.query && typeof req.query.id === 'string' ? req.query.id : '';
 
   const { originalname, destination, path: inputPath } = req.file;
 
@@ -28,8 +31,8 @@ export const pdfManagerController = (req: Request, res: Response, next: NextFunc
 
   const output = pdfManager.encrypt(destination, inputPath, fileName, password);
 
-  res.sendFile(output);
+  if (idReq) responsesManager.addResponse(idReq, 200, 'Sucesso!');
 
-  return next();
+  return res.sendFile(output);
 
 }

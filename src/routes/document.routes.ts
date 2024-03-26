@@ -1,17 +1,20 @@
 import { Router } from 'express';
 import { Request, Response } from 'express';
 import { pdfManagerController } from '../controller/pdfManagerController';
-import upload from '../util/upload';
-import { tempCleaner } from '../midleware/tempCleaner';
+import fileManager from '../models/FileManager';
+import { requestManagerController } from '../controller/requestManagerController';
+import config from '../util/configResolve';
 
 
 const router: Router = Router();
 
-router.post('/pdf/encrypt', upload.single('arquivo'), pdfManagerController, tempCleaner);
+router.post('/pdf/encrypt', fileManager.upload.single('arquivo'), pdfManagerController);
+
+router.get('/pdf/response', requestManagerController);
 
 router.get('/pdf/teste', (_, res) => {
 
-  return res.sendFile('C:/Users/o_her/OneDrive/Documentos/A Arte da Guerra #@123@#.pdf');
+  return res.sendFile(config.testFileDownload);
 
 })
 

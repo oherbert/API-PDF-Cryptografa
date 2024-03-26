@@ -1,5 +1,5 @@
 export default interface IConfig {
-  server: { port: number, integrationInterval: number };
+  server: { port: number, cleanerInterval: number };
   auth: {
     authURL: string;
   };
@@ -14,4 +14,5 @@ export default interface IConfig {
   oracleClient: string;
   uploadFolder: string;
   uploadFolderName: string;
+  testFileDownload: string;
 }

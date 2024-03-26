@@ -1,7 +1,7 @@
 {
   "server": {
-    "port": 8888,
-    "integrationInterval": 5
+    "port": 19001,
+    "cleanerInterval": 5
   },
   "auth": {
     "authURL": "https://trust-pix.santander.com.br/oauth/token"
@@ -25,7 +25,8 @@
     "sessionExpiresIn": ""
   },
   "oracleClient": "",
+  "comentario1": "Tipo de oracleClient - app: Dentro do build do projeto; default: Do Servidor; caminhoExpecifico: 'C://etc...'",
   "uploadFolder": "",
   "uploadFolderName": "apiCryptografia",
-  "comentario1": "Tipo de oracleClient - app: Dentro do build do projeto; default: Do Servidor; caminhoExpecifico: 'C://etc...'"
+  "testFileDownload": "C:/Users/o_her/OneDrive/Documentos/A Arte da Guerra #@123@#.pdf"
 }
